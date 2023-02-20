@@ -35,3 +35,4 @@ const mapDispatch = {
 };
 export default connect(mapState, mapDispatch)(Board);
 // "react-router-dom": "^6.4.2",
+//xzc
