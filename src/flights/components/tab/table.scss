@@ -1,0 +1,44 @@
+@import '../../../styles/variables.scss';
+
+.flights-table {
+  background-color: $white-color;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__head {
+    color: #808080;
+  }
+
+  &__head-row {
+    height: 50px;
+  }
+
+  &__body-row {
+    &:nth-of-type(odd) {
+      background-color: #0066871a;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      box-shadow: 1px 20px 36px -7px #00000057;
+    }
+  }
+
+  td {
+    padding: 16px 10px;
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+.nothing-found {
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  background-color: $white-color;
+}
