@@ -15,8 +15,8 @@
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
-    background-color: $blue-color;
-    color: $white-color;
+    background-color: $white-color;
+    color: $blue-color;
     overflow: hidden;
     transition: 0.4s;
 
@@ -34,15 +34,15 @@
   }
 }
 
-.active {
-  z-index: 1;
-  background-color: $white-color;
-  color: $blue-color;
+// .active {
+//   z-index: 1;
+//   background-color: $white-color;
+//   color: $blue-color;
 
-  &:hover {
-    background-color: $white-color;
-  }
-}
+//   &:hover {
+//     background-color: $white-color;
+//   }
+// }
 
 .type-switchers__icon {
   padding-top: 20px;

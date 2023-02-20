@@ -26,9 +26,9 @@ const Table = ({ flightsData }) => {
   }
 
   const nameArrow =
-    location.pathname === '/departures' ? 'airportToID.city_en' : 'airportFromID.city_en';
+    location.pathname === 'departures' ? 'airportToID.city_en' : 'airportFromID.city_en';
 
-  console.log('SI', searchInputValue);
+  // console.log('SI', searchInputValue);
 
   const filtredFlight =
     searchInputValue === null
