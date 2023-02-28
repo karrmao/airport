@@ -26,14 +26,10 @@ module.exports = (env, argv) => {
             'sass-loader',
           ],
         },
-        {
-          test: /\.svg$/,
-          use: ['@svgr/webpack'],
-        },
       ],
     },
-    stats: {
-      children: true,
+    resolve: {
+      extensions: ['.js', '.jsx'],
     },
     plugins: [
       new webpack.ProgressPlugin(),
@@ -43,19 +39,16 @@ module.exports = (env, argv) => {
       }),
       new CopyPlugin({
         patterns: [
-          { from: '_redirects', to: '', noErrorOnMissing: true },
-          { from: 'src/icons', to: 'src/icons' },
+          { from: '_redirects', to: '' },
+          { from: 'source/url/to/images/folder', to: 'dest/url/to/images/folder' },
         ],
       }),
     ],
-    resolve: {
-      extensions: ['.js', '.jsx'],
-    },
     devServer: {
       historyApiFallback: true,
       open: true,
       hot: true,
-      port: 8080,
+      port: 9090,
     },
   };
 
