@@ -27,3 +27,4 @@ Layout supports only desktop (up-to-1400) versions
 Author:
 
 <b>Igor Okarma</b>
+some text
