@@ -19,7 +19,7 @@ const Table = ({ flightsData }) => {
 
   const currentFlight =
     location.pathname === '/departures' ? flightsData.departure : flightsData.arrival;
-  console.log('cF', currentFlight);
+  console.log('cF filtred');
 
   if (!currentFlight) {
     return null;
@@ -28,7 +28,7 @@ const Table = ({ flightsData }) => {
   const nameArrow =
     location.pathname === 'departures' ? 'airportToID.city_en' : 'airportFromID.city_en';
 
-  // console.log('SI', searchInputValue);
+  console.log('SI', searchInputValue);
 
   const filtredFlight =
     searchInputValue === null
@@ -36,7 +36,7 @@ const Table = ({ flightsData }) => {
       : currentFlight.filter(fly =>
           fly[nameArrow].toLowerCase().includes(searchInputValue.toLowerCase()),
         );
-
+  console.log('typeof?', typeof filtredFlight);
   console.log(filtredFlight);
   return flightsData.departure.length === 0 ? (
     <div className="nothing-found">No flights</div>
@@ -55,7 +55,7 @@ const Table = ({ flightsData }) => {
         </thead>
         <tbody className="table__body">
           {filtredFlight.map(flight => (
-            <TableItem key={flight.id} flightData={flight} />
+            <TableItem key={flight.ID} flightData={flight} />
           ))}
         </tbody>
       </table>

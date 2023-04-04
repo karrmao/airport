@@ -1,3 +1,49 @@
+// @import '../../../styles/variables.scss';
+
+// .date-picker {
+//   display: flex;
+//   align-items: center;
+//   padding-left: 45px;
+//   height: 70px;
+//   background-color: $white-color;
+
+//   &__icon {
+//     border-radius: 4px;
+//     font-size: 40px;
+//     background-color: $blue-color;
+//     color: $white-color;
+//   }
+
+//   &__input {
+//     margin-left: 10px;
+//     margin-top: 10px;
+//     width: 110px;
+//     border: none;
+//   }
+
+//   &__nearest-day {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding-left: 10px;
+//     font-size: 10px;
+//     border: none;
+//     background-color: white;
+//     color: #a9a9a9;
+//   }
+
+//   &__nearest-day span {
+//     font-size: 14px;
+//     font-weight: 700;
+
+//     &--active {
+//       color: #1eb7ee;
+//       cursor: pointer;
+//       border-bottom: 2px solid $blue-color;
+//     }
+//   }
+// }
+
 @import '../../../styles/variables.scss';
 
 .date-picker {
@@ -30,6 +76,8 @@
     border: none;
     background-color: white;
     color: #a9a9a9;
+    //add
+    border-bottom: 2px solid #b9b9b9;
   }
 
   &__nearest-day span {
@@ -37,7 +85,7 @@
     font-weight: 700;
   }
 
-  &__nearest-day:hover {
+  &__nearest-day--active {
     color: #1eb7ee;
     cursor: pointer;
     border-bottom: 2px solid $blue-color;

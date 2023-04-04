@@ -1,3 +1,17 @@
+@import '../../../styles/breakpoints.scss';
+
 .board {
   margin: 70px 120px 60px;
+
+  @include for-large-up {
+    background-color: red;
+  }
+
+  @include for-midium-up {
+    background-color: green;
+  }
+
+  @include for-small-up {
+    background-color: blue;
+  }
 }

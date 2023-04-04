@@ -4,7 +4,7 @@ import './tableItem.scss';
 
 const TableItem = ({ flightData }) => {
   const terminal = flightData.term;
-
+  console.log(flightData);
   const localTime = flightData.timeDepShedule
     ? moment(flightData.timeDepShedule).format('HH:mm')
     : moment(flightData.timeArrShedule).format('HH:mm');

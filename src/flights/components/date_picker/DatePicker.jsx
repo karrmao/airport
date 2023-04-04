@@ -34,16 +34,19 @@ const DatePicker = ({ dateValue, setDateValue }) => {
         onClick={() => setDateValue(getCurrentDate(privDate, calendarFormat))}
         date={getCurrentDate(privDate, dayMothFormat)}
         text="YESTERDAY"
+        dateValue={dateValue}
       />
       <BtnNearestDay
         onClick={() => setDateValue(getCurrentDate(curentDate, calendarFormat))}
         date={getCurrentDate(curentDate, dayMothFormat)}
         text="TODAY"
+        dateValue={dateValue}
       />
       <BtnNearestDay
         onClick={() => setDateValue(getCurrentDate(nextDate, calendarFormat))}
         date={getCurrentDate(nextDate, dayMothFormat)}
         text="TOMORROW"
+        dateValue={dateValue}
       />
     </div>
   );
