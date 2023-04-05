@@ -32,9 +32,11 @@ const Table = ({ flightsData, dateValue }) => {
   const filtredFlight =
     searchInputValue === null
       ? currentFlight
-      : currentFlight.filter(fly =>
-          fly[nameArrow].toLowerCase().includes(searchInputValue.toLowerCase()),
-        );
+      : currentFlight.filter(fly => fly[nameArrow].includes(searchInputValue));
+
+  //   : currentFlight.filter(fly =>
+  //   fly[nameArrow].toLowerCase().includes(searchInputValue.toLowerCase()),
+  // );
 
   console.log('data', filtredFlight);
 
