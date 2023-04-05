@@ -4,7 +4,11 @@ import './tableItem.scss';
 
 const TableItem = ({ flightData }) => {
   const terminal = flightData.term;
-  console.log(flightData);
+
+  // console.log(
+  //   'sired',
+  //   flightData.filter(el => console.log(el)),
+  // );
   const localTime = flightData.timeDepShedule
     ? moment(flightData.timeDepShedule).format('HH:mm')
     : moment(flightData.timeArrShedule).format('HH:mm');
@@ -17,7 +21,7 @@ const TableItem = ({ flightData }) => {
   const airlineLogo = flightData.airline.en.logoSmallName;
   const airlineName = flightData.airline.en.name;
   const planeNumber = flightData.codeShareData[0].codeShare;
-  console.log(flightData);
+  // console.log(flightData);
   return (
     <tr className="table__body-row">
       <td>

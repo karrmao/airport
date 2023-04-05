@@ -5,13 +5,15 @@ import TableItem from '../tableItem/TableItem';
 import { getFlightsData } from '../../flights.actions';
 import './table.scss';
 
-const Table = ({ flightsData }) => {
+import moment from 'moment';
+
+const Table = ({ flightsData, dateValue }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const date = searchParams.get('date');
   const searchInputValue = searchParams.get('search');
 
-  console.log(location.pathname);
+  console.log('DV&&1', dateValue);
 
   useEffect(() => {
     getFlightsData(date);
@@ -19,7 +21,6 @@ const Table = ({ flightsData }) => {
 
   const currentFlight =
     location.pathname === '/departures' ? flightsData.departure : flightsData.arrival;
-  console.log('cF filtred');
 
   if (!currentFlight) {
     return null;
@@ -28,16 +29,24 @@ const Table = ({ flightsData }) => {
   const nameArrow =
     location.pathname === 'departures' ? 'airportToID.city_en' : 'airportFromID.city_en';
 
-  console.log('SI', searchInputValue);
-
   const filtredFlight =
     searchInputValue === null
       ? currentFlight
-      : currentFlight.filter(fly =>
-          fly[nameArrow].toLowerCase().includes(searchInputValue.toLowerCase()),
-        );
-  console.log('typeof?', typeof filtredFlight);
-  console.log(filtredFlight);
+      : currentFlight.filter(fly => fly[nameArrow].includes(searchInputValue));
+
+  /** code go dawn with .toLowerCase() * */
+  // : currentFlight.filter(fly =>
+  //     fly[nameArrow].toLowerCase().includes(searchInputValue.toLowerCase()),
+  //   );
+  console.log('data', filtredFlight);
+
+  console.log(
+    'filtred?',
+    filtredFlight.filter(el =>
+      console.log('DV&&2', moment(el.actual).format('YYYY-MM-DD') === dateValue),
+    ),
+  );
+
   return flightsData.departure.length === 0 ? (
     <div className="nothing-found">No flights</div>
   ) : (
@@ -55,6 +64,7 @@ const Table = ({ flightsData }) => {
         </thead>
         <tbody className="table__body">
           {filtredFlight.map(flight => (
+            // console.log('flight XXXX', flight);
             <TableItem key={flight.ID} flightData={flight} />
           ))}
         </tbody>
@@ -62,4 +72,15 @@ const Table = ({ flightsData }) => {
     </div>
   );
 };
+
+const arr = [
+  { id: 1, name: 'Bob' },
+  { id: 2, name: 'Bob' },
+  { id: 3, name: 'Mary' },
+  { id: 4, name: 'Ann' },
+  { id: 5, name: 'Bob' },
+];
+
+const bobsArray = arr.filter(obj => obj.name === 'Bob');
+console.log(bobsArray);
 export default Table;

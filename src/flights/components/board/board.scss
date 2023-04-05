@@ -1,8 +1,9 @@
 @import '../../../styles/breakpoints.scss';
 
 .board {
-  margin: 70px 120px 60px;
-
+  // margin: 70px 120px 60px;
+  max-width: 1000px;
+  margin: 0 auto;
   @include for-large-up {
     background-color: red;
   }

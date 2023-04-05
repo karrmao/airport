@@ -14,7 +14,7 @@ const TypeSwitchers = () => {
   };
 
   // const x = location;
-  console.log('location:', location);
+  // console.log('location:', location);
   return (
     <div className="type-switchers">
       <NavLink

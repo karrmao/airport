@@ -20,7 +20,7 @@ const DatePicker = ({ dateValue, setDateValue }) => {
     setSearchParams(searchParams);
   }, [dateValue]);
 
-  console.log(dateValue);
+  // console.log(dateValue);
   return (
     <div className="date-picker">
       <input
