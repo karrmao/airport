@@ -2,6 +2,8 @@
 
 <h1> <a href='https://astounding-conkies-24195b.netlify.app'>Site Link</a> </h1>
 
+# Attention! After the start of the full-scale war, flights in Ukraine have been suspended. To view flight data, please select a date prior to February 23, 2022.
+
 Layout supports only desktop (up-to-1400) versions
 
 <h3>Used technologies:</h3>
