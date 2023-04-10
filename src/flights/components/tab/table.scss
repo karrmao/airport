@@ -1,37 +1,44 @@
 @import '../../../styles/variables.scss';
-
-.flights-table {
-  background-color: $white-color;
-}
+@import '../../../styles/breakpoints.scss';
 
 .table {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0px 20px 20px -7px rgb(30 183 238 / 34%);
 
-  &__head {
-    color: #808080;
+  @include for-midium-down {
+    font-size: 3vw;
   }
+}
 
-  &__head-row {
-    height: 50px;
-  }
+.table__body-row,
+.table__head-row {
+  display: flex;
+}
 
-  &__body-row {
-    &:nth-of-type(odd) {
-      background-color: #0066871a;
-      transition: 0.3s;
-    }
+.table__body-row:nth-of-type(odd) {
+  background-color: rgb(30 183 238 / 15%);
+}
 
-    &:hover {
-      box-shadow: 1px 20px 36px -7px #00000057;
-    }
-  }
+th,
+td {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 8px;
+}
 
-  td {
-    padding: 16px 10px;
-    text-align: center;
-    font-size: 18px;
-  }
+th,
+td {
+  min-width: 10%;
+}
+
+tr th,
+tr td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nothing-found {
@@ -40,5 +47,5 @@
   text-align: center;
   font-size: 50px;
   font-weight: 700;
-  background-color: $white-color;
+  background-color: #ffffff;
 }

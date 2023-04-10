@@ -4,10 +4,13 @@ import { connect } from 'react-redux';
 import * as flightsActions from '../../flights.actions';
 import flightsDataSelector from '../../flights.selectors';
 import { getCurrentDate, calendarFormat, curentDate } from '../../dateUtils';
-import TypeSwitchers from '../type_switchers/TypeSwitchers';
+
 import DatePicker from '../date_picker/DatePicker';
+
 import SearchFlightForm from '../searchFlightsForm/SearchFlightForm';
+
 import Table from '../tab/Table';
+import TypeSwitchers from '../type_switchers/TypeNewSwitchers';
 
 import './board.scss';
 

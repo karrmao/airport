@@ -28,28 +28,6 @@ const Table = ({ flightsData, dateValue }) => {
   const nameArrow =
     location.pathname === '/departures' ? 'airportToID.city_en' : 'airportFromID.city_en';
 
-  //option 1
-  // const filtredFlight =
-  // searchInputValue === null
-  //   ? currentFlight
-  //   : currentFlight.filter(
-  //       fly =>
-  //         fly['airportToID.city_en'] === searchInputValue ||
-  //         fly['airportFromID.city_en'] === searchInputValue ||
-  //         fly.codeShareData[0].codeShare === searchInputValue,
-  //     );
-
-  //option 2
-  // const filtredFlight =
-  //   searchInputValue === null
-  //     ? currentFlight
-  //     : currentFlight.filter(
-  //         fly =>
-  //           fly[nameArrow] === searchInputValue ||
-  //           fly.codeShareData[0].codeShare === searchInputValue,
-  //       );
-
-  //option 3
   const dataInput =
     searchInputValue === null
       ? currentFlight
@@ -64,7 +42,6 @@ const Table = ({ flightsData, dateValue }) => {
   );
 
   return flightsData.departure.length === 0 || dataInput.length === 0 ? (
-    // return flightsData.departure.length === 0 || filtredFlight.length === 0 ? (
     <div className="nothing-found">No flights</div>
   ) : (
     <div className="flights-table">
@@ -76,7 +53,7 @@ const Table = ({ flightsData, dateValue }) => {
             <th>Destination</th>
             <th>Status</th>
             <th>Airline</th>
-            <th>Flight</th>
+            <th> Flight</th>
           </tr>
         </thead>
         <tbody className="table__body">
@@ -90,14 +67,3 @@ const Table = ({ flightsData, dateValue }) => {
 };
 
 export default Table;
-// const arr = [
-//   { name: 'bob', age: 16, id: 1 },
-//   { name: 'ann', age: 16, id: 2 },
-//   { name: 'bil', age: 16, id: 3 },
-// ];
-// console.log(
-//   arr.filter(el => {
-//     console.log();
-//     return el.name.includes('b');
-//   }),
-// );

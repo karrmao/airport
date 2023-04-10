@@ -17,11 +17,13 @@ const TableItem = ({ flightData }) => {
   const airlineLogo = flightData.airline.en.logoSmallName;
   const airlineName = flightData.airline.en.name;
   const planeNumber = flightData.codeShareData[0].codeShare;
-  console.log(planeNumber);
+
   return (
     <tr className="table__body-row">
       <td>
-        <span className="terminal">{terminal}</span>
+        <span className={terminal === 'A' ? 'terminal' : 'terminal terminal--pomaranch'}>
+          {terminal}
+        </span>
       </td>
       <td>{localTime}</td>
       <td>{destination}</td>

@@ -24,10 +24,11 @@ const SearchFlightForm = () => {
         <input
           type="text"
           className="search-flights__input"
-          placeholder="Type city name"
+          placeholder="Type city name, flights number or else"
           value={searchInputValue}
           onChange={handleChange}
         />
+
         <button type="submit" className="search-flights__btn">
           Search
         </button>

@@ -20,7 +20,6 @@ const DatePicker = ({ dateValue, setDateValue }) => {
     setSearchParams(searchParams);
   }, [dateValue]);
 
-  // console.log(dateValue);
   return (
     <div className="date-picker">
       <input
@@ -30,24 +29,26 @@ const DatePicker = ({ dateValue, setDateValue }) => {
         onChange={e => setDateValue(e.target.value)}
       />
 
-      <BtnNearestDay
-        onClick={() => setDateValue(getCurrentDate(privDate, calendarFormat))}
-        date={getCurrentDate(privDate, dayMothFormat)}
-        text="YESTERDAY"
-        dateValue={dateValue}
-      />
-      <BtnNearestDay
-        onClick={() => setDateValue(getCurrentDate(curentDate, calendarFormat))}
-        date={getCurrentDate(curentDate, dayMothFormat)}
-        text="TODAY"
-        dateValue={dateValue}
-      />
-      <BtnNearestDay
-        onClick={() => setDateValue(getCurrentDate(nextDate, calendarFormat))}
-        date={getCurrentDate(nextDate, dayMothFormat)}
-        text="TOMORROW"
-        dateValue={dateValue}
-      />
+      <div className="date-picker__nearest-days">
+        <BtnNearestDay
+          onClick={() => setDateValue(getCurrentDate(privDate, calendarFormat))}
+          date={getCurrentDate(privDate, dayMothFormat)}
+          text="YESTERDAY"
+          dateValue={dateValue}
+        />
+        <BtnNearestDay
+          onClick={() => setDateValue(getCurrentDate(curentDate, calendarFormat))}
+          date={getCurrentDate(curentDate, dayMothFormat)}
+          text="TODAY"
+          dateValue={dateValue}
+        />
+        <BtnNearestDay
+          onClick={() => setDateValue(getCurrentDate(nextDate, calendarFormat))}
+          date={getCurrentDate(nextDate, dayMothFormat)}
+          text="TOMORROW"
+          dateValue={dateValue}
+        />
+      </div>
     </div>
   );
 };

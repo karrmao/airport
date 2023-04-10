@@ -1,0 +1,52 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/breakpoints.scss';
+
+.type-newswitchers {
+  display: flex;
+  position: relative;
+  height: 60px;
+  margin-top: 40px;
+
+  @include for-midium-down {
+    position: static;
+    flex-direction: column;
+  }
+}
+
+.type-switchers__btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  font-size: 25px;
+  font-weight: 600;
+  width: 55%;
+  border-radius: 60px 60px 0 0;
+  background-color: rgb(30, 183, 238);
+  color: white;
+  text-decoration-line: none;
+  text-transform: uppercase;
+
+  @include for-midium-down {
+    position: static;
+    width: 100%;
+    border-radius: 3px;
+    margin: 5px 0;
+  }
+}
+
+.type-switchers__btn i {
+  padding: 10px;
+}
+
+.type-switchers__btn:last-child {
+  right: 0;
+}
+
+.active {
+  z-index: 1;
+  color: rgb(30, 183, 238);
+  background-color: white;
+  box-shadow: 0px 7px 36px -7px rgb(30 183 238 / 45%);
+}

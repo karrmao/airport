@@ -1,13 +1,10 @@
 import React from 'react';
 import moment from 'moment';
+import '../date_picker/datePicker.scss';
 
 const BtnNearestDay = ({ text, date, onClick, dateValue }) => (
   <button
-    className={
-      date === moment(dateValue).format('DD/MM')
-        ? 'date-picker__nearest-day date-picker__nearest-day--active'
-        : 'date-picker__nearest-day'
-    }
+    className={date === moment(dateValue).format('DD/MM') && 'nearest-day--active'}
     onClick={onClick}
   >
     {date}
@@ -15,3 +12,5 @@ const BtnNearestDay = ({ text, date, onClick, dateValue }) => (
   </button>
 );
 export default BtnNearestDay;
+
+//
