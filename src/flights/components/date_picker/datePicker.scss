@@ -27,9 +27,9 @@
     margin: 10px;
     width: 110px;
     border: none;
-    background-color: #1eb7ee;
+    background-color: $blue-color;
     border-radius: 3px;
-    color: white;
+    color: $white-color;
   }
 
   &__nearest-days {
@@ -47,13 +47,13 @@
       padding-left: 10px;
       font-size: 10px;
       border: none;
-      background-color: white;
-      color: #a9a9a9;
-      border-bottom: 2px solid #b9b9b9;
+      border-bottom: 2px solid $gray-color;
+      background-color: $white-color;
+      color: $gray-color;
 
       &.nearest-day--active {
-        color: #1eb7ee;
-        border-bottom: 2px solid #1eb7ee;
+        color: $blue-color;
+        border-bottom: 2px solid $blue-color;
         background-color: none;
       }
     }

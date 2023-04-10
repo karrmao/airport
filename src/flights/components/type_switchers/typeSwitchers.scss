@@ -23,8 +23,8 @@
   font-weight: 600;
   width: 55%;
   border-radius: 60px 60px 0 0;
-  background-color: rgb(30, 183, 238);
-  color: white;
+  background-color: $blue-color;
+  color: $white-color;
   text-decoration-line: none;
   text-transform: uppercase;
 
@@ -46,7 +46,7 @@
 
 .active {
   z-index: 1;
-  color: rgb(30, 183, 238);
-  background-color: white;
+  background-color: $white-color;
+  color: $blue-color;
   box-shadow: 0px 7px 36px -7px rgb(30 183 238 / 45%);
 }

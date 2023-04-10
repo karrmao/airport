@@ -10,7 +10,7 @@ import DatePicker from '../date_picker/DatePicker';
 import SearchFlightForm from '../searchFlightsForm/SearchFlightForm';
 
 import Table from '../tab/Table';
-import TypeSwitchers from '../type_switchers/TypeNewSwitchers';
+import TypeSwitchers from '../type_switchers/TypeSwitchers';
 
 import './board.scss';
 
