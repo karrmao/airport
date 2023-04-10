@@ -4,7 +4,7 @@
 
 # Attention! After the start of the full-scale war, flights in Ukraine have been suspended. To view flight data, please select a date prior to February 23, 2022.
 
-<h2> Layout supports with desktop (up-to-320 and hier) versions<h12>
+<h2> Layout supports with desktop (up-to-320 and hier) versions<h2>
 
 <h3>Used technologies:</h3>
 <ul>
