@@ -1,6 +1,6 @@
 import React from 'react';
-import { getHourMinutes } from '../../dateUtils';
-import './tableItem.scss';
+import { getHourMinutes } from '../dateUtils';
+import '../../styles/tableItem.scss';
 
 const TableItem = ({ flightData }) => {
   const terminal = flightData.term;

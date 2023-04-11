@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { useSearchParams } from 'react-router-dom';
-import BtnNearestDay from '../btnNearestDay/BtnNearestDay';
+import BtnNearestDay from './BtnNearestDay';
 import {
   curentDate,
   privDate,
@@ -9,8 +9,8 @@ import {
   calendarFormat,
   dayMothFormat,
   getCurrentDate,
-} from '../../dateUtils';
-import './datePicker.scss';
+} from '../dateUtils';
+import '../../styles/datePicker.scss';
 
 const DatePicker = ({ dateValue, setDateValue }) => {
   const [searchParams, setSearchParams] = useSearchParams();

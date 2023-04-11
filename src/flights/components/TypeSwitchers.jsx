@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import './typeSwitchers.scss';
+import '../../styles/typeSwitchers.scss';
 
 const TypeSwitchers = () => (
   <div className="type-newswitchers">

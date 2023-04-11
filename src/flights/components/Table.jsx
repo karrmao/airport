@@ -1,12 +1,12 @@
 /* eslint-disable spaced-comment */
 import React, { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import TableItem from '../tableItem/TableItem';
+import TableItem from './TableItem';
 
-import { getFlightsData } from '../../flights.actions';
-import './table.scss';
+import { getFlightsData } from '../flights.actions';
+import '../../styles/table.scss';
 
-import { getFullYear } from '../../dateUtils';
+import { getFullYear } from '../dateUtils';
 // import moment from 'moment';
 
 const Table = ({ flightsData, dateValue }) => {

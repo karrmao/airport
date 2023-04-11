@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import * as flightsActions from '../../flights.actions';
-import flightsDataSelector from '../../flights.selectors';
-import { getCurrentDate, calendarFormat, curentDate } from '../../dateUtils';
+import * as flightsActions from '../flights.actions';
+import flightsDataSelector from '../flights.selectors';
+import { getCurrentDate, calendarFormat, curentDate } from '../dateUtils';
 
-import DatePicker from '../date_picker/DatePicker';
+import DatePicker from './DatePicker';
 
-import SearchFlightForm from '../searchFlightsForm/SearchFlightForm';
+import SearchFlightForm from './SearchFlightForm';
 
-import Table from '../tab/Table';
-import TypeSwitchers from '../type_switchers/TypeSwitchers';
+import Table from './Table';
+import TypeSwitchers from './TypeSwitchers';
 
-import './board.scss';
+import '../../styles/board.scss';
 
 const Board = ({ flightsData, getFlightsData }) => {
   const [dateValue, setDateValue] = useState(getCurrentDate(curentDate, calendarFormat));

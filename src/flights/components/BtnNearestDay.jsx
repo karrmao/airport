@@ -1,7 +1,7 @@
 import React from 'react';
-import { getFullYear } from '../../dateUtils';
+import { getFullYear } from '../dateUtils';
 
-import '../date_picker/datePicker.scss';
+import '../../styles/datePicker.scss';
 
 const BtnNearestDay = ({ text, date, onClick, dateValue }) => (
   <button className={date === getFullYear(dateValue) && 'nearest-day--active'} onClick={onClick}>
