@@ -1,19 +1,19 @@
 import React from 'react';
-import moment from 'moment';
+import { getHourMinutes } from '../../dateUtils';
 import './tableItem.scss';
 
 const TableItem = ({ flightData }) => {
   const terminal = flightData.term;
 
   const localTime = flightData.timeDepShedule
-    ? moment(flightData.timeDepShedule).format('HH:mm')
-    : moment(flightData.timeArrShedule).format('HH:mm');
+    ? getHourMinutes(flightData.timeDepShedule)
+    : getHourMinutes(flightData.timeArrShedule);
 
   const destination = flightData['airportToID.city_en']
     ? flightData['airportToID.city_en']
     : flightData['airportFromID.city_en'];
 
-  const status = moment(flightData.timeTakeofFact).format('HH:mm');
+  const status = getHourMinutes(flightData.timeTakeofFact);
   const airlineLogo = flightData.airline.en.logoSmallName;
   const airlineName = flightData.airline.en.name;
   const planeNumber = flightData.codeShareData[0].codeShare;
