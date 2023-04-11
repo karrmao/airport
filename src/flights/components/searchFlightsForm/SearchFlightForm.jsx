@@ -24,7 +24,7 @@ const SearchFlightForm = () => {
         <input
           type="text"
           className="search-flights__input"
-          placeholder="Type city name, flights number or else"
+          placeholder="Type city name or flight number"
           value={searchInputValue}
           onChange={handleChange}
         />
