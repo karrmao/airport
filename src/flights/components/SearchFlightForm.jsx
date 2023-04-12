@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/SearchFlightForm.scss';
+import '../../styles/searchFlightForm.scss';
 import { useSearchParams } from 'react-router-dom';
 
 const SearchFlightForm = () => {
