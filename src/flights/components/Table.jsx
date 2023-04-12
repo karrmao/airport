@@ -2,12 +2,9 @@
 import React, { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import TableItem from './TableItem';
-
 import { getFlightsData } from '../flights.actions';
-import '../../styles/table.scss';
-
 import { getFullYear } from '../dateUtils';
-// import moment from 'moment';
+import '../../styles/table.scss';
 
 const Table = ({ flightsData, dateValue }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -26,7 +23,7 @@ const Table = ({ flightsData, dateValue }) => {
     return null;
   }
 
-  const nameArrow =
+  const cityName =
     location.pathname === '/departures' ? 'airportToID.city_en' : 'airportFromID.city_en';
 
   const dataInput =
@@ -34,11 +31,11 @@ const Table = ({ flightsData, dateValue }) => {
       ? currentFlight
       : currentFlight.filter(
           fly =>
-            fly[nameArrow].toLowerCase().includes(searchInputValue.toLowerCase()) ||
+            fly[cityName].toLowerCase().includes(searchInputValue.toLowerCase()) ||
             fly.codeShareData[0].codeShare.toLowerCase().includes(searchInputValue.toLowerCase()),
         );
 
-  const filtredWithActualData = dataInput.filter(el => getFullYear(el.actual) === dateValue);
+  const actualFlightData = dataInput.filter(el => getFullYear(el.actual) === dateValue);
 
   return flightsData.departure.length === 0 || dataInput.length === 0 ? (
     <div className="nothing-found">No flights</div>
@@ -56,7 +53,7 @@ const Table = ({ flightsData, dateValue }) => {
           </tr>
         </thead>
         <tbody className="table__body">
-          {filtredWithActualData.map(flight => (
+          {actualFlightData.map(flight => (
             <TableItem key={flight.ID} flightData={flight} />
           ))}
         </tbody>
