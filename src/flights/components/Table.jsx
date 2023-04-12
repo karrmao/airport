@@ -37,16 +37,6 @@ const Table = ({ flightsData, dateValue }) => {
 
   const actualFlightData = dataInput.filter(el => getFullYear(el.actual) === dateValue);
 
-  // console.log('cF', currentFlight);
-  // console.log('cF - length', currentFlight.length);
-  // console.log(searchInputValue);
-  console.log(dateValue, location.pathname, '***');
-  console.log(actualFlightData.length);
-  console.log(actualFlightData);
-  // console.log(actualFlightData.length);
-
-  // return flightsData.departure.length === 0 || dataInput.length === '' ? (
-
   return currentFlight.length === 0 || actualFlightData.length === 0 ? (
     <div className="nothing-found">No flights</div>
   ) : (
