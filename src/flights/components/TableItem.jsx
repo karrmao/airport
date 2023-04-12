@@ -3,6 +3,7 @@ import { getHourMin } from '../dateUtils';
 import '../../styles/tableItem.scss';
 
 const TableItem = ({ flightData }) => {
+  console.log(flightData);
   const terminal = flightData.term;
 
   const localTime = flightData.timeDepShedule
